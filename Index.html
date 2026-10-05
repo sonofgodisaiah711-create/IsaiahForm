@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="/CAOS-Library-master/CAOS-Library-master/CAOS.file.v-1.5/style.css">
+    <title>Sign Up and Sign In form</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="form-aspect">
+           <h1 id="title">Sign Up</h1>
+            <form>
+                <div class="tri-input animate delay-3 fade-down "> 
+                      <div class="input-group" id="nameField">
+                        <span class="input-group-text">
+                            <i class=" fas fa-user"></i>
+                        </span>
+                        <input type="name" placeholder="Name" class="form-control">
+                      </div>
+
+                      <div class="input-group">
+                        <span class="input-group-text">
+                            <i class=" fas fa-envelope"></i>
+                        </span>
+                        <input type="email" placeholder="Email" class="form-control">
+                      </div>
+
+                      <div class="input-group">
+                        <span class="input-group-text">
+                            <i class=" fas fa-lock"></i>
+                        </span>
+                        <input type="password" placeholder="Password" class="form-control">
+                      </div>
+                      <p class="fs-6 text-black fw-bold hi">Lost password: <a href="#" class="text-decoration-none" style="color: #3c00a0;">Click Here</a></p>
+                </div>
+            </form>
+
+            
+            <div class="btn-group">
+                <button class="btn rounded-5 text-white" id="signupBtn">Sign Up</button>
+                <button class="btn rounded-5 text-white disable" id="signinBtn">Sign In</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"></script>
+    <script src="/CAOS-Library-master/CAOS-Library-master/CAOS.file.v-1.5/script.js"></script>
+
+    <script>
+        let signinBtn = document.getElementById("signinBtn")
+        let signupBtn = document.getElementById("signupBtn")
+        let title = document.getElementById("title")
+        let nameField = document.getElementById("nameField")
+
+        signinBtn.onclick = function(){
+            title.innerHTML = 'Sign In'
+            nameField.style.maxHeight = "0"
+            signinBtn.classList.remove("disable")
+            signupBtn.classList.add("disable")
+        }
+         signupBtn.onclick = function(){
+            title.innerHTML = 'Sign Up'
+            nameField.style.maxHeight = "60px"
+            signinBtn.classList.add("disable")
+            signupBtn.classList.remove("disable")
+        }
+    </script>
+</body>
+</html>
